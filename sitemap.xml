@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/baidu_verify_iHukZBtZ4O.html</loc>
+    <loc>http://yoursite.com/2017/03/31/my-first-BLOG/</loc>
     
-    <lastmod>2017-03-31T05:57:14.010Z</lastmod>
+    <lastmod>2017-03-31T06:08:06.230Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/03/31/hello-world/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
-    <lastmod>2017-03-31T03:20:01.315Z</lastmod>
+    <lastmod>2017-03-31T06:06:50.152Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2017-03-31T06:06:32.679Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/baidu_verify_iHukZBtZ4O.html</loc>
+    
+    <lastmod>2017-03-31T05:57:14.010Z</lastmod>
     
   </url>
   

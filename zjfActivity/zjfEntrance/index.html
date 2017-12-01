@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>我妈急的上火了</title>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script type="text/javascript" src="../common/js/jssdk/jweixin-1.1.0.js"></script>
+    <script src="../common/js/sha1/sha1.js"></script>
+
+    <script src="../common/js/jquery/flexible.js"></script>
+    <script src="../common/js/common.js"></script>
+
+    <!--lib-css-->
+    <link rel="stylesheet" type="text/css" href="../common/js/libs/NavigatorJS/Navigator.css">
+    <!--module-css-->
+    <link rel="stylesheet" href=" css/FirstPage.css">
+    <link rel="stylesheet" type="text/css" href="css/game.css"/>
+    <link rel="stylesheet" href="css/ThirdPage.css">
+    <link rel="stylesheet" href="css/FourthPage.css">
+    <link rel="stylesheet" href="../common/share_template_update/share_template.css">
+
+    <script>
+        var _href = window.location.href;
+        var basePath = _href.substring(0,_href.indexOf("/",8)) + "/zjf";
+//        var basePath = "http://apptest.zhixue.com/zjf";
+        var token = CommonUtil.queryString("token");
+        // 分享文案
+        var _desc="一款你没有发现的考后降压神器";
+        var _title= "Word天考后降压新姿势？99%的人都不知道";
+
+        var _minidesc = "免费领取辅导书";
+        var _minititle = "加入智教辅 ";
+
+        var _link = "/zjfActivity/zjfEntrance/index.html";
+        var _img = basePath + "/zjfActivity/zjfEntrance/images/momShare.png";
+        var _miniimg = basePath + "/zjfActivity/zjfEntrance/images/miniImg.png";
+
+        // 友盟日志-分享
+        var um_param = "我妈急的上火了";
+    </script>
+</head>
+<body>
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+    <img src="images/momShare.png">
+</div>
+<!--第一页-->
+<div class="page pageOne" id="first-page">
+    <!--进度条展示-->
+    <div class="barContainer" style="display: block;">
+        <div class="loadingEmptyBox"></div>
+        <img src="images/loading.gif" alt="" class="loadingGif">
+        <div class="progressBar">
+            <div id="bar"></div>
+        </div>
+        <div class="percentNum"></div>
+    </div>
+
+    <!--音乐播放按钮-->
+    <audio src="sound/6767.mp3" autoplay="autoplay" loop="loop" id="playMusic"></audio>
+    <img src="images/musicBtn.png" class="musicBtn animate3"/>
+
+    <div class="firstPageEmptyBox"></div>
+    <div class="firstPageTitle"></div>
+    <div class="firstPageMom">
+        <div class="momBox">
+            <img src="images/zjfindex_mom.gif" alt="">
+        </div>
+        <div class="firstPageBtn"></div>
+        <div class="momWord1 momWord"></div>
+        <div class="momWord2 momWord" style="display: none;"></div>
+    </div>
+    <div class="firstBotText">智教辅冬日暖心巨作</div>
+</div>
+
+<!--第二页-->
+<div class="page" id="second-page">
+    <canvas id="game_canvas"></canvas>
+    <div id="game_alert_mask">
+        <div id="game_alert_box">
+            <div id="gameOverText">恭喜你,好棒啊！在<span class="timeColor"></span>内给妈妈的火气值降到了0~</div>
+            <img id="game_alert_button" src="images/game_success_btn.png"/>
+        </div>
+    </div>
+</div>
+
+<!--第三页-->
+<div class="page pageThree" id="third-page">
+    <div class="thirdEpmtyBox"></div>
+    <div class="freeReceiveBox">
+        <div class="freeReceiveTitle"><span class="font-color">价值100元</span>辅导书新用户免费领</div>
+        <div class="freeReceiveBook"></div>
+        <div class="freeReceiveBtn">一键领取</div>
+    </div>
+    <div class="actRulesBtn">活动规则></div>
+    <!--注册弹窗-->
+    <div class="registerBox">
+        <p class="registerText">注册</p>
+        <div class="phonenuber infoBox">
+            <input type="number" name="UserName" class="mobile infotext" pattern="[0-9]*" placeholder="手机号"/>
+        </div>
+        <div class="phoneyzm infoBox">
+            <input type="number" name="code" class="code infotext" pattern="[0-9]*" placeholder="验证码"/>
+            <input type="button" class="getyzm" value="获取验证码"/>
+        </div>
+        <div class="errorBox"></div>
+        <div class="receiveGift registerLogin">
+            <input type="button" class="receiveGiftBtn" value="一键领取" disabled="disabled"/>
+        </div>
+    </div>
+</div>
+
+<!--第四页——分享页1-->
+<div class="page pageFour" id="fourth-page">
+    <div class="thirdEpmtyBox"></div>
+    <div class="content">
+        <div class="contentEmptyBox"></div>
+        <p class="title_one sharePageNew">恭喜您免费获得<span>4本辅导书</span></p>
+        <p class="title_two sharePageNew">智教辅新用户进入智教辅兑换领取</p>
+
+        <p class="title_one sharePageOld">您已领取过</p>
+        <p class="title_two sharePageOld">智教辅老用户可分享活动领取更多智币</p>
+
+        <div class="banner sharePageNew"></div>
+        <div class="banner2 sharePageOld"></div>
+
+        <p class="contentText"><span>点击</span>“微信-发现-小程序”，<span>搜索</span>“智教辅”</p>
+        <div class="contentShareBtn">
+            分享再领两本辅导书
+        </div>
+    </div>
+    <div class="actRulesBtn">活动规则></div>
+</div>
+
+
+<div class="pagesMask"></div>
+<!--活动规则-->
+<div class="activityRules">
+    <div class="rulesClose"></div>
+    <div class="rulesBox">
+        <div class="rulesTitle">
+            <div class="rulesLeftLine rulesLine"></div>
+            <span class="rulesText">活动规则</span>
+            <div class="rulesRightLine rulesLine"></div>
+        </div>
+        <p class="rulesStrip">1、本次100元辅导书赠送活动主要针对智教辅新用户。</p>
+        <p class="rulesStrip">2、智教辅进入方法:点击“微信-发现-小程序”，搜索“智教辅”，点击进入。
+        <p class="rulesStrip">3、如果您是智学网的用户，您可通过智学网账号登录。</p>
+        <p class="rulesStrip">4、如果您不是智学网的用户，推荐您通过手机号快捷登录。</p>
+    </div>
+</div>
+<!--扫描二维码弹框-->
+<div class="qrCode">
+    <div class="codeBox" id="_codeBox">
+        <p><span class="qrClose">&times;</span></p>
+        <div id="code">
+        </div>
+    </div>
+</div>
+<div class="maskBox" id="_maskBox">
+    <div class="shareBox" id="_shareBox">
+        <p class="shareTo">分享到</p>
+        <div class="share_successIcon" id="sharePanel">
+            <a href="javaScript:void (0);" class="wechartBox shareIcon" id="btnFriend">
+                <img src="../common/images/temWechart.png" alt="">
+                <span>微信</span>
+            </a>
+
+            <a href="javaScript:void (0);" class="circleBox shareIcon" id="btnWechat">
+                <img src="../common/images/temCircle.png" alt="">
+                <span>朋友圈</span>
+            </a>
+        </div>
+        <div class="borderBox"></div>
+        <p class="cancel_btn">取消</p>
+    </div>
+</div>
+
+<!--微信/QQ内置浏览器-->
+<div class="shareMask">
+    <div class="leadIcon"></div>
+    <div class="leadText">点击这里</div>
+</div>
+
+<div class="toastBox">活动奖励已达到上限</div>
+
+<!--framework js-->
+<script src="../common/js/libs/jquery/jquery-1.11.1.min.js"></script>
+<script src="../common/js/libs/fastclick/fastclick.js"></script>
+<script src="../common/js/libs/NavigatorJS/Navigator.js"></script>
+<script src="../common/js/libs/howler.min.js"></script>
+
+<!--share  is-->
+<script type="text/javascript" src="../common/js/jquery/jquery.qrcode.min.js"></script>
+<script src="../common/share_template_update/index.js"></script>
+<script src="../common/share_template_update/index_weixin.js"></script>
+
+<!--module js-->
+<script src="js/FirstPage.js"></script>
+<script src="js/game.js"></script>
+<script src="js/ThirdPage.js"></script>
+<script src="js/FourthPage.js"></script>
+
+<script>
+    document.body.addEventListener("touchmove", function (event) { // 禁止手机滚动
+        event.preventDefault();
+    }, false);
+
+    document.addEventListener('contextmenu', function (event) { // 禁用长按弹出菜单
+        event.preventDefault();
+    });
+
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function () {
+            FastClick.attach(document.body);
+        }, false);
+    }
+
+    gameModuleInit();
+    Navigator.init({'firstPage': 'first-page'});
+
+    $('.firstPageBtn').click(function () {
+        Navigator.pushControllerWithID('second-page');
+        _czc.push(['_trackEvent', '点击降火', '点击', '我妈急的上火了-第一页']);
+    });
+
+
+    $(document).on('viewWillAppear', function (e, fromPageID, toPageID) {
+        if (toPageID === 'second-page') {
+            if (isGameLoaded) {
+                game.start();
+            }
+        }
+
+        if (toPageID === 'third-page') {
+            setTimeout(function () {
+                $('.thirdShareBox').addClass('animate2');
+            },1500)
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258631616'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1258631616' type='text/javascript'%3E%3C/script%3E"));
+    var _czc = _czc || [];
+    _czc.push(["_setAccount", "1258631616"]);
+</script>
+</body>
+</html>

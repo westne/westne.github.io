@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,body{
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling:touch;
+    /*阻止a标签点击出现，蒙层*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/*阻止a标签点击出现，蒙层*/
+a{
+    outline:none;
+    -moz-outline-style:none;
+}
+
+/*已经领取过代金券*/
+.receive{
+    width: 6.2rem;
+    height: 1.2rem;
+    padding: 0.06rem 0.06rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0,0,0,0.7);
+    font-size: 0.36rem;
+    color: white;
+    text-align: center;
+    line-height: 1.2rem;
+    z-index: 10;
+    border-radius: 12px;
+    display: none;
+}
+
+/*二维码*/
+.qrCode{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2;
+    display: none;
+}
+
+.codeBox{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background: white;
+    text-align: center;
+    display: block;
+}
+
+.codeBox p{
+    width: 100%;
+    height: 25px;
+}
+
+.codeBox span{
+    display: block;
+    width: 22px;
+    height: 22px;
+    float: right;
+    font-size: 28px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*分享模块*/
+.maskBox{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.70);
+    position: absolute;
+    top:0;
+    left: 0;
+    display: none;
+    z-index: 3;
+}
+
+.shareBox{
+    width: 100%;
+    height: 6.34rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: white;
+}
+
+.shareTo{
+    width: 100%;
+    line-height: 1.33rem;
+    font-size: 0.37rem;
+    color: #949495;
+    text-align: center;
+}
+
+.share_successIcon{
+    width: 100%;
+    height: 3.44rem;
+    margin-top: 0.24rem;
+}
+
+.borderBox{
+    width: 80%;
+    border-bottom: 1px solid #F1F1F1;
+    margin: 0 auto;
+}
+
+.cancel_btn{
+    width: 100%;
+    line-height: 1.32rem;
+    text-align: center;
+    font-size: 0.48rem;
+    color: #3E3E3E;
+    cursor: pointer;
+}
+
+.share_successIcon a{
+    /*display: block;*/
+    width: 16%;
+    height: 2.36rem;
+    /*float: left;*/
+    /*margin-left: 7%;*/
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.38rem;
+    color: #646464;
+}
+
+.share_successIcon .wechartBox{
+    float: left;
+    /*margin-left: 13%;*/
+    margin-left: 20%;
+}
+
+.share_successIcon .QQBox{
+    float: left;
+    margin-left: 13%;
+}
+
+.share_successIcon .circleBox{
+    float: right;
+    /*margin-right: 13%;*/
+    margin-right: 20%;
+}
+
+.share_successIcon a img{
+    display: block;
+    width: 1.52rem;
+    height: 1.52rem;
+}
+
+.share_successIcon a span{
+    display: inline-block;
+    margin-top: 0.26rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.37rem;
+    color: #646464;
+}
+
+#cnzz_stat_icon_1258631616{
+    display: none;
+}
